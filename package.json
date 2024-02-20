@@ -5,13 +5,17 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify ./src/index.js -o ./public/bundle.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.6.7",
+    "browser-resolve": "^2.0.0",
+    "esmify": "^2.1.1",
+    "jquery": "^3.7.1",
     "qr-image": "^3.2.0"
   }
 }
