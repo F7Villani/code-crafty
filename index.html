@@ -9,23 +9,45 @@
 </head>
 <body>
     <header id="header">
-        <img src="./assets/F7V.png" alt="Code Crafty Logo">
+        <img src="./assets/logo.png" alt="Code Crafty Logo">
         <h1>Code Crafty</h1>
     </header>
 
-    <h2></h2>
+    <div id="content">
 
-    <div class="gradient-border-external">
-        <div class="gradient-border-internal">
-            <input type="text">
+        <div id="form">
+            <h2>Crie seu QRCode</h2>
+            <h3>Rápido. Fácil.</h3>
+        
+            <div class="gradient-border-external">
+                <div class="gradient-border-internal">
+                    <input type="text" placeholder="Site, Email, Telefone e mais">
+                </div>
+            </div>
+            <input type="button" class="gradient-button" id="create" value="Criar QR Code">
         </div>
+    
+        <div class="center loader-container" style="display:none">
+            <div class="loader"></div>
+        </div>
+
+        <div class="logo">
+            <img src="./assets/logo.png" alt="code crafty logo">
+        </div>
+
+        <div id="solution">
+            <img class="qrcode">
+            <a type="button" class="gradient-button download-button center" id="download">Download</a>
+        </div>
+
+
     </div>
-    <input type="button" id="create" value="Criar">
+
+
     <div id="footer">
 
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="module" src="index.js"></script>
+    <script type="module" src="bundle.js"></script>
 </body>
 </html>
