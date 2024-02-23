@@ -16569,17 +16569,17 @@ function initializePage() {
 }
 async function handleCreateQRCodeClick() {
   toogleLoader();
-
-  // await createQRCode
-
-  // Remove loader
-
   let imageSource = await createQRCode();
   toogleLoader();
   (0, _jquery.default)(".qrcode").attr("src", imageSource);
   (0, _jquery.default)("#solution").css("display", "flex");
   (0, _jquery.default)("#download").attr("download", "qrcode.png");
   (0, _jquery.default)("#download").attr("href", imageSource);
+  if (isMobile()) {
+    document.getElementById("solution").scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
 }
 async function createQRCode() {
   let source = (0, _jquery.default)("input[type='text']").val();
@@ -16611,6 +16611,10 @@ function getType(source) {
 }
 function timeout(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+function isMobile() {
+  console.log((0, _jquery.default)(document).width());
+  return (0, _jquery.default)(document).width() <= 600;
 }
 
 },{"jquery":81,"qr-image":89}],80:[function(require,module,exports){

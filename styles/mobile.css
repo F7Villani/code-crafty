@@ -1,0 +1,70 @@
+@media only screen and (max-width: 600px) {
+    
+    html {
+        width: 90%;
+        height: 90%;
+        margin: 1rem 0 1rem 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    #form {
+        width: 100%;
+    }
+
+    #content {
+        display: flex;
+        flex-direction: column;
+        gap: 15vh;
+        height: auto;
+    }
+
+    #solution {
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center
+    }
+
+    .qrcode{
+        width: 80%;
+        height: auto;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .gradient-border-external {
+        width: 80%;
+        padding: 2px;
+    }
+
+    .loader {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .loader::after,
+    .loader::before {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .loader::before {
+        width: 30px;
+        height: 30px;
+    }
+
+}

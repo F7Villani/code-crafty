@@ -6,6 +6,7 @@ html {
 
 body {
     background-color: #101728;
+    margin: 0;
 }
 
 h1 {
@@ -72,10 +73,9 @@ a {
 }
 
 #solution {
-    display: flex;
+    display: none;
     align-items: center;
     flex-direction: column;
-    display: none;
 }
 
 .gradient-border-external {
