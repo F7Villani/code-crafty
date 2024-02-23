@@ -11,10 +11,6 @@ async function handleCreateQRCodeClick(){
 
     toogleLoader();
 
-    // await createQRCode
-
-    // Remove loader
-
     let imageSource = await createQRCode();
 
     toogleLoader();
@@ -23,6 +19,10 @@ async function handleCreateQRCodeClick(){
     $("#solution").css("display", "flex");
     $("#download").attr("download", "qrcode.png");
     $("#download").attr("href", imageSource);
+    
+    if(isMobile()){
+        document.getElementById("solution").scrollIntoView({behavior: 'smooth'});    
+    }
 }
 
 async function createQRCode(){
@@ -61,5 +61,10 @@ function getType(source){
 
 function timeout(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function isMobile(){
+    console.log($(document).width());
+    return $(document).width() <= 600;
 }
 
